@@ -1,0 +1,19 @@
+/* Couleur en nom de couleur */
+.text-red {
+    color: red;
+}
+
+/* Couleur en code hexadécimal */
+.text-blue {
+    color: #0000FF;
+}
+
+/* Couleur en RGB */
+.text-green {
+    color: rgb(0, 128, 0);
+}
+
+/* Couleur en RGBA (avec transparence) */
+.text-transparent {
+    color: rgba(255, 0, 0, 0.5);
+}

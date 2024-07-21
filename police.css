@@ -1,0 +1,14 @@
+/* Police générique */
+.font-serif {
+    font-family: serif;
+}
+
+/* Police spécifique */
+.font-arial {
+    font-family: Arial, sans-serif;
+}
+
+/* Police personnalisée */
+.font-custom {
+    font-family: 'Open Sans', sans-serif;
+}

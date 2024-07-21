@@ -1,0 +1,19 @@
+/* Texte en gras */
+.text-bold {
+    font-weight: bold;
+}
+
+/* Texte en italique */
+.text-italic {
+    font-style: italic;
+}
+
+/* Texte en majuscules */
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/* Texte souligné */
+.text-underline {
+    text-decoration: underline;
+}

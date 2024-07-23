@@ -1,0 +1,38 @@
+/* Police générique */
+.font-serif {
+    font-family: serif;
+}
+
+/* Police spécifique */
+.font-arial {
+    font-family: Arial, sans-serif;
+}
+
+/* Police personnalisée */
+.font-custom {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Image de fond */
+.background-image {
+    background-image: url('path/to/image.jpg');
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir l'élément */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+/* Propriétés de fond combinées */
+.background-combined {
+    background: url('https://via.placeholder.com/150') no-repeat fixed center / cover;
+}
+
+/* Décomposées pour référence */
+.background-individual {
+    background-image: url('https://via.placeholder.com/150');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(90deg, #8360c3, #2ebf91);
+}
+

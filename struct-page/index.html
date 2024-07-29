@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #5281DD;
@@ -28,12 +30,31 @@
             color: white;
             padding: 2em;
             font-size: 1.1em;
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
         }
         aside {
             background-color: #F89C9C;
             color: white;
             padding: 1em;
+            margin-left: 1em;
             font-size: 1em;
+            width: 20%;
+            text-align: center;
+        }
+        .content {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+        section {
+            background-color: #D9D9D9;
+            color: black;
+            padding: 1em;
+            margin-bottom: 1em;
+            flex: 1;
         }
         footer {
             background-color: #000000;
@@ -41,12 +62,6 @@
             padding: 1em;
             text-align: center;
             font-size: 1em;
-        }
-        section {
-            background-color: #D9D9D9;
-            color: black;
-            padding: 1em;
-            margin-bottom: 1em;
         }
     </style>
     <title>Page de Structure</title>
@@ -59,15 +74,17 @@
         Voici nav
     </nav>
     <main>
+        <div class="content">
+            <section>
+                Voici section 1
+            </section>
+            <section>
+                Voici section 2
+            </section>
+        </div>
         <aside>
             Voici aside
         </aside>
-        <section>
-            Voici section 1
-        </section>
-        <section>
-            Voici section 2
-        </section>
     </main>
     <footer>
         Voici footer

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple de positionnement relatif</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: lightblue;
+            padding: 20px;
+            border: 1px solid blue;
+        }
+        .static-box {
+            background-color: lightgreen;
+            padding: 20px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="static-box">Cet élément est positionné statiquement et reste dans le flux normal de la page.</p>
+        <p class="relative-box">Cet élément est décalé de 20 pixels vers le bas et de 30 pixels vers la droite par rapport à sa position normale. L'espace qu'il occupe originellement est toujours préservé dans le flux de la page.</p>
+        <p class="static-box">Cet autre élément statique s'affiche en dessous de l'élément relatif, en tenant compte de l'espace d'origine de l'élément relatif.</p>
+    </div>
+</body>
+</html>

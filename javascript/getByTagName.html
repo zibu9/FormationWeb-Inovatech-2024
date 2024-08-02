@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple getElementsByTagName</title>
+</head>
+<body>
+    <p>Premier paragraphe</p>
+    <p>Deuxième paragraphe</p>
+    <script>
+        let paragraphs = document.getElementsByTagName("p");
+        for (let i = 0; i < paragraphs.length; i++) {
+            console.log(paragraphs[i].textContent); // Affiche : Premier paragraphe puis Deuxième paragraphe
+        }
+    </script>
+</body>
+</html>

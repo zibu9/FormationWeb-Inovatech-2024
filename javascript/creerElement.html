@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création d'éléments dynamiques</title>
+</head>
+<body>
+    <button onclick="ajouterElement()">Ajouter un élément</button>
+
+    <script>
+        function ajouterElement() {
+            // Créer un nouveau div
+            let newDiv = document.createElement("div");
+
+            // Ajouter du contenu HTML au div
+            newDiv.innerHTML = "<p>Ceci est un paragraphe à l'intérieur d'un nouveau div.</p>";
+
+            // Ajouter le div au body
+            document.body.appendChild(newDiv);
+        }
+    </script>
+</body>
+</html>

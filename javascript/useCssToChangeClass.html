@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Changer le style avec des classes</title>
+    <style>
+        .normal {
+            color: black;
+            background-color: white;
+        }
+        .highlight {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <p id="texte" class="normal">Ce texte va changer de style</p>
+    <button onclick="changerStyle()">Changer le style</button>
+
+    <script>
+        function changerStyle() {
+            const element = document.getElementById("texte");
+            element.classList.toggle("highlight");
+        }
+    </script>
+</body>
+</html>

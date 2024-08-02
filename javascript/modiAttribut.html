@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modification des attributs</title>
+</head>
+<body>
+    <img id="image" src="image1.png" alt="Image 1">
+    <button onclick="changerImage()">Changer l'image</button>
+
+    <script>
+        function changerImage() {
+            document.getElementById("image").src = "image2.png";
+            document.getElementById("image").alt = "Image 2";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple querySelectorAll</title>
+</head>
+<body>
+    <div class="container">
+        <p class="text">Premier paragraphe</p>
+        <p class="text">Deuxième paragraphe</p>
+        <p class="text">Troisième paragraphe</p>
+    </div>
+
+    <script>
+        // Sélection de tous les paragraphes avec la classe "text"
+        let allParagraphs = document.querySelectorAll(".text");
+        
+        // Parcourir tous les éléments sélectionnés
+        allParagraphs.forEach(paragraph => {
+            console.log(paragraph.textContent);
+        });
+        // Affiche :
+        // "Premier paragraphe"
+        // "Deuxième paragraphe"
+        // "Troisième paragraphe"
+    </script>
+</body>
+</html>

@@ -7,25 +7,32 @@
 </head>
 <body>
     <script>
-        var nom = "Alice";
+        // Demander à l'utilisateur de saisir son âge
+        let age = prompt("Quel est votre âge ?");
 
-        let age = 18;
-        console.log(age);
-        const pays = "France";
-let age = 25;
-let prix = 19.99;
+        // Convertir la saisie en nombre
+        age = parseInt(age);
 
-let score = 10; // Initialisation de la variable score avec la valeur 10
-console.log(score); // Affiche 10
+        // Vérifier si l'utilisateur est majeur ou mineur
+        if (age >= 18) {
+        alert("Vous êtes majeur.");
+        console.log("Vous êtes majeur.");
+        } else {
+        alert("Vous êtes mineur.");
+        console.log("Vous êtes mineur.");
+        }
+        
+        let score = parseInt(prompt("entrer votre score"));
 
-score = 20; // Modification de la valeur de score
-console.log(score); // Affiche 20
-
-
-let placesDejaVendues = "150"; // "150" est une chaîne de caractères
-placesDejaVendues += "10"; // Concatène "150" et "10"
-console.log(placesDejaVendues); // Affiche "15010"
-
+        if (score >= 90) {
+            console.log("Excellent !");
+        } else if (score >= 70) {
+            alert("Bien !");
+            console.log("Bien !");
+        } else {
+            alert("Peut mieux faire.");
+            console.log("Peut mieux faire.");
+        }
 
 
     </script>

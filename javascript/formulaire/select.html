@@ -1,0 +1,18 @@
+<form id="monFormulaire">
+    <label for="couleur">Couleur préférée :</label>
+    <select id="couleur" name="couleur">
+      <option value="rouge">Rouge</option>
+      <option value="bleu">Bleu</option>
+      <option value="vert">Vert</option>
+    </select>
+    <button type="submit">Soumettre</button>
+</form>
+  
+<script>
+  document.getElementById("monFormulaire").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let couleur = document.getElementById("couleur").value;
+      console.log("Couleur préférée:", couleur);
+  });
+</script>
+  

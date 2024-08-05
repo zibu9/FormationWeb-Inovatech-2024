@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations sur l'événement</title>
+</head>
+<body>
+    <button id="monBouton">Cliquez-moi</button>
+    <p id="resultat"></p>
+
+    <script>
+        const bouton = document.getElementById("monBouton");
+        const resultat = document.getElementById("resultat");
+
+        bouton.addEventListener("click", function(event) {
+            // Utilisation de l'objet event pour obtenir des informations sur l'événement
+            const type = event.type; // Type d'événement
+            const target = event.target; // Élément cible de l'événement
+            const x = event.clientX; // Position X du curseur de la souris
+            const y = event.clientY; // Position Y du curseur de la souris
+
+            resultat.innerHTML = `
+                <p>Type d'événement : ${type}</p>
+                <p>Élément cliqué : ${target.tagName}</p>
+                <p>Position du clic : (${x}, ${y})</p>
+            `;
+        });
+    </script>
+</body>
+</html>

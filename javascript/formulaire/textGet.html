@@ -1,0 +1,14 @@
+<form id="monFormulaire">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom">
+    <button type="submit">Soumettre</button>
+  </form>
+  
+  <script>
+  document.getElementById("monFormulaire").addEventListener("submit", function(event) {
+      event.preventDefault(); // Empêche le formulaire de se soumettre automatiquement
+      let nom = document.getElementById("nom").value;
+      console.log("Nom saisi:", nom);
+  });
+  </script>
+  

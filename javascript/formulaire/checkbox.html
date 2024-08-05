@@ -1,0 +1,16 @@
+<form id="monFormulaire">
+    <label>
+      <input type="checkbox" id="accepter" name="accepter">
+      J'accepte les conditions d'utilisation
+    </label>
+    <button type="submit">Soumettre</button>
+</form>
+  
+<script>
+  document.getElementById("monFormulaire").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let accepter = document.getElementById("accepter").checked; // `checked` est un booléen
+      console.log("Conditions acceptées:", accepter);
+  });
+</script>
+  

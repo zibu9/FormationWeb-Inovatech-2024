@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements en JavaScript</title>
+</head>
+<body>
+    <button id="monBouton">Cliquez-moi</button>
+    <p id="resultat"></p>
+
+    <script>
+        // Récupérer le bouton et le paragraphe
+        const bouton = document.getElementById("monBouton");
+        const resultat = document.getElementById("resultat");
+
+        // Ajouter un gestionnaire d'événements pour le clic
+        bouton.addEventListener("click", function() {
+            resultat.textContent = "Vous avez cliqué sur le bouton !";
+        });
+    </script>
+</body>
+</html>

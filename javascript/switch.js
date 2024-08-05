@@ -10,7 +10,7 @@ switch (jour) {
     break;
   case 3:
     nomDuJour = "Mercredi";
-    break;
+    
   case 4:
     nomDuJour = "Jeudi";
     break;

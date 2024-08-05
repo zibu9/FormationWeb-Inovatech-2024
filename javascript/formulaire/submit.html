@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumission de Formulaire</title>
+</head>
+<body>
+    <form id="monFormulaire">
+        <!-- champ nom -->
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom">
+
+        <!-- champ email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email">
+
+        <button type="submit">Soumettre</button>
+    </form>
+
+    <script>
+        // Sélectionne le formulaire par son ID
+        let form = document.getElementById("monFormulaire")
+        form.addEventListener("submit", function(event) {
+            // Empêche le comportement par défaut de soumission du formulaire
+            event.preventDefault();
+            
+            // Récupère la valeur du champ de saisie "nom"
+            let nom = document.getElementById("nom").value;
+            let email = document.getElementById("email").value;
+
+            // Affiche la valeur du champ "nom" dans la console
+            console.log("Nom soumis : " + nom);
+            console.log("Email soumis : " + email);
+            
+            // Vous pouvez ajouter ici des traitements supplémentaires, comme l'envoi des données au serveur via AJAX
+        });
+    </script>
+</body>
+</html>

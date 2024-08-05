@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de Formulaire</title>
+</head>
+<body>
+    <form id="validationForm">
+        <label for="email">Email :</label>
+        <input type="text" id="email" name="email">
+        <button type="submit">Soumettre</button>
+        <p id="error-message" style="color:red;"></p>
+    </form>
+
+    <script>
+        document.getElementById("validationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche la soumission par défaut
+
+            let emailField = document.getElementById("email");
+            let errorMessage = document.getElementById("error-message");
+
+            // Vérifie si le champ email est vide
+            if (emailField.value.trim() === "") {
+                errorMessage.textContent = "Le champ email ne peut pas être vide.";
+            } else {
+                errorMessage.textContent = "";
+                console.log("Email soumis : " + emailField.value);
+                // Procéder à l'envoi des données ou autres actions
+            }
+        });
+    </script>
+</body>
+</html>

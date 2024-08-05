@@ -1,0 +1,30 @@
+<form id="preferenceForm">
+    <label>Préférence de couleur :</label><br>
+    <input type="radio" id="red" name="couleur" value="red" checked>
+    <label for="red">Rouge</label><br>
+    <input type="radio" id="blue" name="couleur" value="blue">
+    <label for="blue">Bleu</label><br>
+    <input type="radio" id="green" name="couleur" value="green">
+    <label for="green">Vert</label><br>
+    <button type="submit">Soumettre</button>
+</form>
+
+<script>
+    document.getElementById("preferenceForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Empêche le formulaire de se soumettre automatiquement
+    
+        let baliseCouleur = document.querySelectorAll('input[name="couleur"]');
+        let couleur = "";
+        
+        // Boucle à travers les boutons radio
+        for (let i = 0; i < baliseCouleur.length; i++) {
+            if (baliseCouleur[i].checked) {
+                couleur = baliseCouleur[i].value; // Récupère la valeur du bouton radio sélectionné
+                break; // Sort de la boucle dès qu'on trouve le bouton coché
+            }
+        }
+        
+        console.log(couleur); // Affiche la valeur du radio coché
+    });
+    
+</script>

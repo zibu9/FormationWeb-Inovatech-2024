@@ -1,0 +1,127 @@
+body {
+    margin: 0; /* Retire les marges par défaut */
+    font-family: Arial, sans-serif; /* Définit la police de caractères */
+}
+
+header {
+    display: flex; /* Utilise Flexbox pour l'alignement des éléments */
+    justify-content: space-between; /* Espace entre le logo et le menu de navigation */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    padding: 20px 25px; /* Ajoute des espaces autour des éléments de l'en-tête */
+    background-color: #333333; /* Couleur de fond sombre */
+    color: white; /* Couleur du texte blanc */
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px; /* Taille de la police pour le logo */
+}
+
+/* Menu de navigation */
+nav {
+    display: flex; /* Utilise Flexbox pour aligner les éléments du menu */
+}
+
+nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Retire le padding par défaut */
+    margin: 0; /* Retire les marges par défaut */
+    display: flex; /* Aligne les éléments de la liste en ligne */
+  }
+
+  nav li {
+    margin-left: 70px; /* Ajoute de l'espace à gauche de chaque élément de la liste */
+    position: relative; /* Nécessaire pour positionner les sous-menus */
+  }
+
+  nav ul li ul li {
+    margin-left: 0px; /* Retire la marge gauche des éléments des sous-menus */
+    position: relative; /* Nécessaire pour le positionnement des sous-menus */
+  }
+
+  nav a {
+    color: white; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+  }
+
+  nav a:hover {
+    background-color: #444; /* Change la couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+    border-radius: 4px; /* Ajoute des coins arrondis aux liens */
+    padding: 5px 10px; /* Ajoute du padding pour agrandir la zone cliquable */
+  }
+
+  .active-page {
+    background-color: #444; /* Change la couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+    border-radius: 4px; /* Ajoute des coins arrondis aux liens */
+    padding: 5px 10px; /* Ajoute du padding pour agrandir la zone cliquable */
+  }
+
+  .dropdown-content {
+    display: none; /* Cache les sous-menus par défaut */
+    position: absolute; /* Positionne les sous-menus de manière absolue */
+    background-color: #333; /* Couleur de fond sombre pour les sous-menus */
+    min-width: 160px; /* Largeur minimale des sous-menus */
+    top: 100%; /* Positionne les sous-menus juste en dessous du parent */
+    left: 0; /* Aligne les sous-menus avec le bord gauche du parent */
+    z-index: 1; /* Assure que les sous-menus apparaissent au-dessus des autres éléments */
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block; /* Affiche les sous-menus lorsqu'on survole le parent */
+  }
+
+  .dropdown-content a {
+    color: white; /* Couleur du texte des liens dans les sous-menus */
+    padding: 12px 16px; /* Ajoute du padding pour les liens des sous-menus */
+    text-decoration: none; /* Supprime le soulignement des liens des sous-menus */
+    display: block; /* Affiche les liens des sous-menus en bloc */
+  }
+
+  /* Menu hamburger pour les petits écrans */
+.hamburger-menu {
+    display: none; /* Cache le menu hamburger par défaut */
+    cursor: pointer; /* Change le curseur au survol pour indiquer qu'il est cliquable */
+    flex-direction: column; /* Affiche les barres du menu hamburger en colonne */
+  }
+  
+  .hamburger-menu span {
+    background-color: white; /* Couleur des barres du menu hamburger */
+    height: 3px; /* Hauteur de chaque barre */
+    width: 25px; /* Largeur de chaque barre */
+    margin: 3px 0; /* Espace entre chaque barre */
+  }
+
+  @media (max-width: 768px){
+    .hamburger-menu {
+        display: flex; /* Affiche le menu hamburger sur les petits écrans */
+    }
+    
+    #nav-menu {
+        display: none; /* Cache le menu de navigation par défaut sur les petits écrans */
+        position: absolute; /* Positionne le menu de navigation de manière absolue */
+        top: 60px; /* Distance du menu par rapport au haut de la page */
+        right: 0; /* Aligne le menu de navigation avec le bord droit */
+        background-color: #333; /* Couleur de fond sombre pour le menu de navigation */
+        width: 100%; /* Occupe toute la largeur disponible */
+        flex-direction: column; /* Aligne les éléments du menu de navigation en colonne */
+        z-index: 1000;
+    }
+
+    #nav-menu ul {
+        flex-direction: column; /* Aligne les éléments de la liste en colonne */
+        width: 100%; /* Occupe toute la largeur du menu de navigation */
+      }
+    
+      #nav-menu ul li {
+        margin: 15px 10px; /* Espace entre les éléments de la liste sur les petits écrans */
+      }
+    
+      #nav-menu.active {
+        display: flex; /* Affiche le menu de navigation lorsqu'il est actif */
+      }
+    
+
+  }
+  

@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     $file = $_FILES['file'];
 
     // Récupérez les informations sur le fichier
-    var_dump($file);
+    echo'<pre>';print_r($file);echo'</pre>';die();
     $fileName = $file['name'];
     $fileTmpName = $file['tmp_name'];
     $fileSize = $file['size'];
@@ -35,3 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     echo "Aucun fichier n'a été téléchargé.";
 }
 ?>
+
+
+
+

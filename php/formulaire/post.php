@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
+    $name = strip_tags($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars($_POST['message']);
+    $message = strip_tags($_POST['message']);
 
     echo "Nom : " . $name . "<br>";
     echo "E-mail : " . $email . "<br>";

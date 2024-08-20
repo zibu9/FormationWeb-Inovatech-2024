@@ -1,9 +1,8 @@
 <?php
     require_once('connection.php');
-    $articlesStmt = $bdCon->prepare('SELECT * FROM articles');
+    $sql = 'SELECT * FROM articles';
+    $articlesStmt = $bdCon->prepare($sql);
     $articlesStmt->execute();
     $articles = $articlesStmt->fetchAll();
-    foreach ($articles as $row) {
-        echo '<h1>' . $row['titre'] . '</h1>';
-    }
+    debug($articles);
 ?>

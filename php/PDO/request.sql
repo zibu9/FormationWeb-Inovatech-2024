@@ -1,19 +1,42 @@
-SELECT * FROM articles
+CREATE DATABASE blog_db;
+USE blog_db;
 
-SELECT articles.titre, categories.nom 
-FROM articles
-RIGHT JOIN categories ON articles.categorie_id = categories.id;
+CREATE TABLE utilisateurs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom_utilisateur VARCHAR(255) NOT NULL,
+    mot_de_passe VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'utilisateur') DEFAULT 'utilisateur',
+    UNIQUE(email)
+);
+
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE articles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(255) NOT NULL,
+    contenu TEXT NOT NULL,
+    image_lien VARCHAR(255),
+    date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
+    id_categorie INT NOT NULL,
+    id_utilisateur INT NOT NULL,
+    approuve BOOLEAN DEFAULT FALSE,
+    actif BOOLEAN DEFAULT TRUE,
+    FOREIGN KEY (id_categorie) REFERENCES categories(id),
+    FOREIGN KEY (id_utilisateur) REFERENCES utilisateurs(id)
+);
+
+CREATE TABLE commentaires (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_article INT NOT NULL,
+    id_utilisateur INT NOT NULL,
+    contenu TEXT NOT NULL,
+    date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_article) REFERENCES articles(id),
+    FOREIGN KEY (id_utilisateur) REFERENCES utilisateurs(id)
+);
 
 
-SELECT UPPER(titre) AS titre_majuscule, LENGTH(description) AS longueur_description
-FROM articles;
-
-SELECT COUNT(*) AS nombre_articles, AVG(file_size) AS taille_moyenne_fichiers
-FROM uploads;
-
-SELECT titre, DATE_FORMAT(creation_date, '%d-%m-%Y') AS date_formatee
-FROM articles;
-
-
-SELECT titre, DATE_FORMAT(creation_date, '%d-%m-%Y %H:%i:%s') AS date_heure_formatee
-FROM articles;
